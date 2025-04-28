@@ -59,3 +59,126 @@ const finalGrade = (midterm, final, homework) => {
         return 'A'
     }
 };
+
+// challenge 6
+const reportingForDuty = (rank, lastName) => `${rank} ${lastName} reporting for duty!`;
+
+// challenge 7
+const rollTheDice = () => {
+    let die1 = Math.floor(Math.random() * 6 + 1)
+    let die2 = Math.floor(Math.random() * 6 + 1)
+    return die1 + die2
+};
+
+// challenge 8
+const calculateWeight = (earthWeight, planet) => {
+    switch (planet) {
+        case 'Mercury':
+            return earthWeight * .378;
+        case 'Venus':
+            return earthWeight * .907;
+        case 'Mars':
+            return earthWeight * .377;
+        case 'Jupiter':
+            return earthWeight * 2.36;
+        case 'Saturn':
+            return earthWeight * .916;
+        default:
+            return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.'
+    }
+};
+
+// challenge 9
+const truthyOrFalsy = (value) => {
+    if (value) {
+      return true
+    } else {
+      return false
+    }
+  };
+
+// challenge 10
+const numImaginaryFriends = (totalFriends) => {
+    var imaginaryFriends = Math.ceil(totalFriends * 0.25)
+    return imaginaryFriends
+  };
+
+// challenge 11
+const sillySentence = (adjective, verb, noun) => `I am so ${adjective} because I ${verb} coding! Time to write some more awesome ${noun}!`;
+
+// challenge 12
+const howOld = (age, year) => {
+    let dateToday = new Date();
+    let thisYear = dateToday.getFullYear();
+  
+    const yearDifference = year - thisYear
+    const newAge = age + yearDifference
+    if (newAge > age) {
+        return `You will be ${newAge} in the year ${year}`
+    } else if (newAge < 0) {
+        return `The year ${year} was ${-newAge} years before you were born`
+    } else {
+        return `You were ${newAge} in the year ${year}`
+    }
+};
+
+// challenge 13
+const whatRelation = percentSharedDNA => {
+    if (percentSharedDNA === 100) {
+        return 'You are likely identical twins.'
+    }
+    if (percentSharedDNA > 34) {
+        return 'You are likely parent and child or full siblings.'
+    }
+    if (percentSharedDNA > 13) {
+        return 'You are likely grandparent and grandchild, aunt/uncle and niece/nephew, or half siblings.'
+    }
+    if (percentSharedDNA > 5) {
+        return 'You are likely 1st cousins.'
+    }
+    if (percentSharedDNA > 2) {
+        return 'You are likely 2nd cousins.'
+    }
+    if (percentSharedDNA > 0) {
+        return 'You are likely 3rd cousins'
+    }
+    return 'You are likely not related.'
+}
+
+console.log(whatRelation(34))
+
+console.log(whatRelation(3))
+
+// challenge 14
+const tipCalculator = (quality, total) => {
+    switch (quality) {
+        case 'bad':
+            return total * .05;
+        case 'ok':
+            return total * .15;
+        case 'good':
+            return total * .20;
+        case 'excellent':
+            return total * .30;
+        default:
+            return total * .18;
+    }
+};
+
+// challenge 15
+const toEmoticon = meaning => {
+    switch (meaning) {
+        case 'shrug':
+            return '|_{"}_|'
+        case 'smiley face':
+            return ':)';
+        case 'frowny face':
+            return ':(';
+        case 'winky face':
+            return ';)';
+        case 'heart':
+            return '<3';
+        default:
+            return '|_(* ~ *)_|';
+    }
+};
