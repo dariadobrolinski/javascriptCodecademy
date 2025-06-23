@@ -78,7 +78,7 @@ historyOfEverything.addRating(4);
 historyOfEverything.addRating(5);
 historyOfEverything.addRating(5);
 let historyOfEverythingRating = historyOfEverything.getAverageRating();
-console.log('A Short History of Nearly Everything is rated', historyOfEverythingRating, 'out of 5');
+console.log('A Short History of Nearly Everything is rated', historyOfEverythingRating, 'out of 5 stars');
 
 const speed = new Movie('Speed', 'Jan de Bont', 116);
 speed.toggleCheckOutStatus();
@@ -89,4 +89,4 @@ speed.addRating(1);
 speed.addRating(1);
 speed.addRating(5);
 let speedRating = speed.getAverageRating();
-console.log('Speed is rated', speedRating, "out of 5");
+console.log('Speed is rated', speedRating, "out of 5 stars");
